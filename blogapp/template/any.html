@@ -1,0 +1,47 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block body %}
+<div class="content">
+    <h2></h2>
+    <p></p>
+    <p style="text-indent: 35px;"></p>
+    <p style="text-indent: 35px;"></p>
+    <h2>Commentary</h2>
+    <p></p>
+    <p style="text-indent: 35px;"></p>
+    <p style="text-indent: 35px;"></p>
+    <p style="text-indent: 35px;"></p>
+    <a href="/"><button type="button" class="btn btn-dark" id="btnh">Go to home</button></a>
+</div>
+
+<style>
+    #btnh {
+        height: 45px;
+        width: 60%;
+        margin: 2% 18%;
+        border-radius: 140px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnyzOGZzI92UReZg9aeBpqVA-HZRrk1LSUhpgK5_dHVw&s');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .content {
+        padding: 2%;
+        font-family: cursive;
+        font-size: larger;
+    }
+</style>
+{% endblock %}

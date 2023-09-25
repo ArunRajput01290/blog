@@ -1,0 +1,216 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block body %}
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: sans-serif;
+        height: 100%;
+        width: 100%;
+        background-color: #f7fff7;
+    }
+
+
+    .content {
+        /* position: absolute; */
+        top: 10%;
+        color: rgb(7, 7, 7);
+        padding: 1%;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Paragraph styles */
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .why-choose-us {
+        padding: 50px 0;
+        background-color: #f7f7f7;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 28px;
+    }
+
+    .box {
+        border: 1px solid #ccc;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .feature {
+        text-align: center;
+    }
+
+    .feature i {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .feature h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .feature p {
+        font-size: 16px;
+        color: #666;
+    }
+
+    main {
+        position: relative;
+        background-image: url(https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg);
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    main::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(27, 27, 27, 0.212);
+    }
+
+
+</style>
+
+<main>
+    <section>
+        <!-- <div class="imgb">
+            <img src="{% static 'blogapp/milky-way-2695569_1280.jpg' %}" alt="background" height="660px"
+                width="100%">
+        </div> -->
+        <div class="content">
+            <h1>Welcome To My Self Development Portal !</h1>
+            <p>At our blog, we are on a mission to empower individuals like you to unlock their true potential and live
+                a
+                life of fulfillment and abundance. We are passionate about self-development, financial education, and
+                the
+                transformative power of knowledge.</p>
+            <p>What sets us apart is our commitment to providing you with valuable, actionable content that yields
+                tangible
+                results. We take great care in curating articles that are not just informative, but also practical and
+                tailored to your needs. Our focus is on delivering content that you can apply in your everyday life to
+                drive
+                positive change.</p>
+            <p>Through our extensive research and deep understanding of the topics we cover, we distill complex ideas
+                into
+                digestible insights. We strive to present information in a way that is relatable and easy to grasp,
+                ensuring
+                that you can quickly apply it to your personal and financial journey.</p>
+            <p>Our blog serves as a compass, guiding you through the intricate landscape of self-improvement and
+                financial
+                literacy. We help you navigate the challenges, overcome obstacles, and seize opportunities along the
+                way.
+                Our ultimate goal is to equip you with the knowledge, skills, and mindset necessary for long-term
+                success.
+            </p>
+            <p>Join our community of growth-minded individuals who are committed to personal transformation. Here,
+                you'll
+                find a supportive network of like-minded individuals who share their experiences, insights, and
+                victories.
+                Together, we celebrate progress, learn from setbacks, and inspire each other to reach new heights.</p>
+            <p>As you explore our blog, you'll discover a variety of content formats, including in-depth articles,
+                thought-provoking essays, practical guides, interviews with experts, and engaging multimedia. We cater
+                to
+                diverse learning styles and preferences, ensuring that there's something for everyone.</p>
+            <p>In addition to our regular content, we offer exclusive resources and tools to our dedicated readers.
+                You'll
+                have access to downloadable worksheets, recommended reading lists, interactive exercises, and more, all
+                designed to enhance your learning experience and accelerate your growth.</p>
+            <p>Remember, personal development is a continuous journey, and we are here to support you every step of the
+                way.
+                Together, we can break through limitations, cultivate resilience, and unleash your true potential. Get
+                ready
+                to embark on a transformative adventure that will empower you to create the life you've always
+                envisioned.
+            </p>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="feature">
+                                <i class="fa fa-heart"></i>
+                                <h3>Inspiration at Heart</h3>
+                                <p>Prepare to be inspired! Our articles are crafted with passion and purpose, igniting
+                                    your inner fire and propelling you towards greatness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="feature">
+                                <i class="fa fa-lightbulb"></i>
+                                <h3>Illuminate Your Path</h3>
+                                <p>Unlock the path to success with our valuable insights, innovative ideas, and
+                                    practical strategies that will illuminate your journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="feature">
+                                <i class="fa fa-users"></i>
+                                <h3>Empowering Community</h3>
+                                <p>Join our vibrant community of dreamers, doers, and achievers who uplift and inspire
+                                    one another on the remarkable journey of personal growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box">
+                        <div class="box-content">
+                            <div class="feature">
+                                <i class="fa fa-book"></i>
+                                <h3>Bookworm's Paradise</h3>
+                                <p>For the avid readers, delve into our virtual library of wisdom, as we explore
+                                    timeless classics and groundbreaking books that fuel your intellectual curiosity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}

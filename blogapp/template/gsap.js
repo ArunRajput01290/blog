@@ -1,0 +1,1 @@
+gsap.from('.card', { duration: 1,scale:2 })

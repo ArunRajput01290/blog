@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Portal</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Vehicle Portal</h2>
+        <div class="container1">
+            <h4>Calculate Your Vehicle Distance</h4>
+            <span>Enter Your Vehicle Speed</span>
+            <input type="number" id="speed"><br>
+            <span>Enter Your Vehicle Time Taken</span>
+            <input type="number" id="time"><br>
+            <button onclick="dist()">Calculate Distance</button>
+            <p id="result"></p> <!-- Element to display the result -->
+        </div>
+
+        <div class="container2">
+            <h4>Calculate Time Taken by Your Vehicle</h4>
+            <span>Enter Your Vehicle Distance</span>
+            <input type="number" id="dist"><br>
+            <span>Enter Your Vehicle Speed</span>
+            <input type="number" id="speedt"><br>
+            <button onclick="Time()">Calculate Time</button>
+            <p id="result2"></p>
+        </div>
+
+
+        <div class="container3">
+            <h4>Calculate Speed of Your Vehicle</h4>
+            <span>Enter Your Vehicle Distance</span>
+            <input type="number" id="distd"><br>
+            <span>Enter Your Vehicle Time</span>
+            <input type="number" id="timet"><br>
+            <button onclick="Speed()">Calculate Speed</button>
+            <p id="result3"></p>
+        </div>
+
+
+        <div class="container4">
+            <h4>Find how much fuel will your vehicle consume</h4>
+            <span>Enter Your Vehicle Distance</span>
+            <input type="number" id="distf"><br>
+            <span>Enter Your Vehicle Mileage</span>
+            <input type="number" id="mil"><br>
+            <button onclick="Fuel()">Calculate Fuel</button>
+            <p id="result4"></p>
+        </div>
+
+
+        <div class="container5">
+            <h4>Mileage Of Your Vehicle</h4>
+            <span>Enter Your Vehicle Distance</span>
+            <input type="number" id="distm"><br>
+            <span>Enter Your Vehicle Fuel</span>
+            <input type="number" id="fuelm"><br>
+            <button onclick="Mileage()">Calculate Mileage</button>
+            <p id="result5"></p>
+        </div>
+    </div>
+
+
+    <style>
+        p {
+            border: ridge;
+            border-radius: 10px;
+            position: relative;
+            bottom: -28px;
+        }
+
+        h4 {
+            position: relative;
+            bottom: 20px;
+        }
+
+        * {
+            margin: 0%;
+        }
+
+        .container {
+            padding: 20px;
+            background-image: url(black-1072366_1280.jpg);
+            text-align: center;
+            color: whitesmoke;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container1 {
+            padding: 60px;
+            background-image: url(milky-way-2695569_1280.jpg);
+            border-radius: 15px;
+
+        }
+
+        .container2 {
+            padding: 60px;
+            background-image: url(ocean-3605547_640.jpg);
+            background-position: top;
+        }
+
+        .container3 {
+            padding: 60px;
+            background-image: url(milky-way-2695569_1280.jpg);
+            background-position: left;
+        }
+
+        .container4 {
+            padding: 60px;
+            background-image: url(astronomy-1867616_1280.jpg);
+            background-position: bottom;
+        }
+
+        .container5 {
+            padding: 60px;
+            background-image: url(astronomy-1867616_1280.jpg);
+            background-position: left;
+            border-radius: 15px;
+        }
+
+        input {
+            border: none;
+        }
+
+        button {
+            box-shadow: 0 2px 4px 2px;
+            padding: 8px;
+            border-radius: 10px;
+            background-color: inherit;
+            position: relative;
+            top: 18px;
+        }
+    </style>
+
+
+
+    <script>
+        function dist() {
+            let speed = parseInt(document.getElementById('speed').value);
+            let time = parseInt(document.getElementById('time').value);
+            let distance = speed * time;
+            document.getElementById('result').textContent = distance + ' km will be covered in ' + time + ' hour and at a speed of ' + speed + ' km/hr';
+        }
+
+        function Time() {
+            let dist = parseInt(document.getElementById('dist').value);
+            let speed = parseInt(document.getElementById('speedt').value);
+            let time = dist / speed;
+            document.getElementById('result2').textContent = time + ' hours';
+        }
+
+        function Speed() {
+            let dist = parseInt(document.getElementById('distd').value);
+            let time = parseInt(document.getElementById('timet').value);
+            let speed = dist / time;
+            document.getElementById('result3').textContent = speed + ' km/hr';
+        }
+
+        function Fuel() {
+            let dist = parseInt(document.getElementById('distf').value);
+            let mil = parseInt(document.getElementById('mil').value);
+            let fuel = dist / mil;
+            document.getElementById('result4').textContent = fuel + ' litre fuel will be consumed';
+        }
+
+        function Mileage() {
+            let dist = parseInt(document.getElementById('distm').value);
+            let fuel = parseInt(document.getElementById('fuelm').value);
+            let mileage = dist / fuel;
+            document.getElementById('result5').textContent = mileage + ' km/l';
+        }
+    </script>
+</body>
+
+</html>

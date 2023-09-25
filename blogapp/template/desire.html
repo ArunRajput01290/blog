@@ -1,0 +1,176 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %}Turn Desire Into Gold{% endblock %}
+{% block body %}
+<div class="img">
+    <img src="{% static 'blogapp/milky-way-2695569_1280.jpg' %}" alt="background" width="100%" height="450px">
+</div>
+<div class="content">
+    <h2>Few Ways To Turn Desire Into Gold</h2>
+    <form id="desireForm">
+        <span>Money Which You Desire To Get </span>
+        <input type="text" name="moneyDesire"><br>
+        <span>What you intend to give in return for this money for desire </span>
+        <input type="text" name="intentToGive"><br>
+        <span>Time when you intend to possess the money which you desire </span>
+        <input type="text" name="timeToPossess"> <br>
+        <span>Create definite plan for carrying out your desire </span>
+        <input type="text" name="definitePlan"> <br>
+        <span>More Money Which You Desire To Get </span>
+        <input type="text" name="moreMoneyDesire"> <br>
+        <button type="button" class="button">Submit</button>
+    </form>
+</div>
+<div class="contents">
+    <div class="dets">
+        <p>Fill it out, concise statement of the amount of money you intent to acquire, name the time limit for its
+            acquisition, state what you intend to give in return for the money , and describe clearly the plan through
+            which you intend to accumulate it.</p>
+    </div>
+    <div class="text-display">
+        <!-- Entered text will be displayed here -->
+    </div>
+    <div class="dets 1">
+        <p>Read your written statement aloud, twice daily. Read it once just before retiring at night, and read it once
+            after arising in the morning. As you read, see and feel and believe yourself already in possession of the
+            money.</p>
+        <p>It is important that you follow the instructions in these six It is especially important that you observe and
+            follow the instructions in the sixth step. You may complain that it is impossible for you to "see yourself
+            in possession of money" before you actually have it. Here is where a burning desire will come to your aid.
+            If you truly desire money so keenly that your desire is an obsession, you will have no difficulty in
+            convincing yourself that you will acquire it. The object is to want money, and to become so determined to
+            have it that you convince yourself you will have it.</p>
+        <p>If you have not been schooled in the workings of the human mind, these instructions may appear impractical.
+            It may help you to know that the information they convey was given to me by Andrew Carnegie, who made
+            himself into one of the most successful men in American history. Carnegie began as an ordinary laborer in
+            the steel mills, but managed, despite his humble beginning, to make these principles yield him a fortune of
+            considerably more than $100 million [In today's terms, the value of Carnegie's fortune would be at least $20
+            billion, and probably a good deal more].</p>
+        <p>It may be of further help to know that the six steps were carefully scrutinized by the famed inventor and
+            successful businessman, Thomas A. Edison. He gave his stamp of approval, saying they are essential for the
+            accumulation of money, but also not only the steps
+            for the attainment of any goal.</p>
+    </div>
+    <a href="/"><button type="button" class="btn btn-dark" id="btnh">Go to home</button></a>
+
+</div>
+
+<script>
+    // Function to handle form submission
+    function handleSubmit() {
+        // Disable the submit button to prevent multiple submissions
+        document.querySelector('.button').disabled = true;
+
+        // Get input values
+        var moneyDesire = document.querySelector('input[name="moneyDesire"]').value;
+        var intentToGive = document.querySelector('input[name="intentToGive"]').value;
+        var timeToPossess = document.querySelector('input[name="timeToPossess"]').value;
+        var definitePlan = document.querySelector('input[name="definitePlan"]').value;
+        var moreMoneyDesire = document.querySelector('input[name="moreMoneyDesire"]').value;
+
+        // Create a text string to display
+        var displayText = `Money Desire: ${moneyDesire}<br>`;
+        displayText += `Intent to Give: ${intentToGive}<br>`;
+        displayText += `Time to Possess: ${timeToPossess}<br>`;
+        displayText += `Definite Plan: ${definitePlan}<br>`;
+        displayText += `More Money Desire: ${moreMoneyDesire}<br>`;
+
+        // Create a new div element to display the text
+        var displayDiv = document.createElement('div');
+        displayDiv.innerHTML = displayText;
+
+        // Append the new div to the text-display container
+        document.querySelector('.text-display').appendChild(displayDiv);
+    }
+
+    // Attach the handleSubmit function to the submit button
+    document.querySelector('.button').addEventListener('click', handleSubmit);
+</script>
+
+<style>
+    #btnh {
+        height: 45px;
+        width: 60%;
+        margin: 2% 18%;
+        border-radius: 140px;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        height: 100%;
+        width: 100%;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnyzOGZzI92UReZg9aeBpqVA-HZRrk1LSUhpgK5_dHVw&s');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .text-display {
+        padding-bottom: 2%;
+        font-weight: 900;
+    }
+
+    * {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .contents {
+        padding: 5%;
+        font-family: cursive;
+        font-size: larger;
+        /* background-color: wheat; */
+        position: relative;
+        top: -8.5%;
+    }
+
+    .img {
+        position: absolute;
+        width: 100%;
+    }
+
+    .content {
+        position: relative;
+        color: whitesmoke;
+        text-align: center;
+        padding: 6%;
+        margin: 0%;
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    input {
+        height: 28px;
+        padding: 6px;
+    }
+
+    .button {
+        width: 10%;
+        color: aliceblue;
+        background-color: transparent;
+        border-radius: 16px;
+        box-shadow: 8px 7px 6px black;
+        margin: 2%;
+    }
+
+    input,
+    textarea {
+        border-radius: 5px;
+        /* width: 85%; */
+        background-color: #c5d1efa9;
+        border: blue;
+        padding: 9px;
+    }
+</style>
+{% endblock %}
